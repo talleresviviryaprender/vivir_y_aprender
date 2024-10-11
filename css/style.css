@@ -15,7 +15,7 @@
 /* Estilos del botón de menú */
 .menu-toggle {
     display: none;
-    background-color: white;
+    background-color: transparent;
     border: none;
     padding: 10px;
     font-size: 2em;
@@ -81,6 +81,13 @@ footer {
     text-align: center; /* Alineación centrada */
 }
 
+footer .logo {
+    width: 30px; /* Ancho del logo */
+    height: 30px; /* Altura del logo */
+    border-radius: 50%; /* Forma redonda */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+}
+
 /* Mostrar el botón de menú en pantallas pequeñas */
 @media (max-width: 768px) {
     .menu-toggle {
@@ -95,5 +102,55 @@ footer {
 
     #main {
         margin-top: 0; /* Espaciado superior */
+    }
+
+    .navbar {
+        flex-direction: column; /* Cambia la disposición a vertical */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+    }
+
+    .navbar li {
+        margin: 10px 0; /* Reducir el espacio entre los elementos del menú */
+    }
+
+    .navbar a {
+        font-size: 1em; /* Reducir el tamaño de la fuente */
+    }
+
+    .navbar .logo {
+        width: 25px; /* Reducir el ancho del logo */
+        height: 25px; /* Reducir la altura del logo */
+    }
+
+    footer {
+        padding: 10px 0; /* Reducir el espaciado superior e inferior */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Cambia la disposición a vertical */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+    }
+    
+    .navbar li {
+        margin: 5px 0; /* Reducir aún más el espacio entre los elementos del menú */
+    }
+
+    .navbar a {
+        font-size: 0.9em; /* Reducir aún más el tamaño de la fuente */
+    }
+
+    .navbar .logo {
+        width: 20px; /* Reducir aún más el ancho del logo */
+        height: 20px; /* Reducir aún más la altura del logo */
+    }
+
+    #main {
+        margin-top: 0; /* Reducir aún más el espaciado superior */
+    }
+
+    footer {
+        padding: 5px 0; /* Reducir aún más el espaciado superior e inferior */
     }
 }
