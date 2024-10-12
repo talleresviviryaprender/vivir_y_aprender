@@ -88,36 +88,30 @@ footer .logo {
     object-fit: cover; /* Asegura que la imagen cubra el contenedor */
 }
 
-.floating-balloon {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #ff5733; /* Color del globo */
-            color: white;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s;
-        }
-        
-        .floating-balloon:hover {
-            background-color: #c70039; /* Color al pasar el mouse */
-        }
+.btn btn-primary {
+    position: fixed;
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 999;
+}
 
-        .social-buttons {
-            display: none;
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            flex-direction: column;
-            gap: 10px;
-        }
+.btn btn-success {
+    position: fixed;
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 999;
+}
 
+.btn btn-danger {
+    position: fixed;
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 999;
+}
+
+.btn:hover {
+    backgroond-color: #9dc1fd;
+}
 
 /* Mostrar el botón de menú en pantallas pequeñas */
 @media (max-width: 768px) {
