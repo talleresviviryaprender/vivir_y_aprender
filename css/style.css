@@ -90,6 +90,10 @@ footer .logo {
 
 .btn btn-primary {
     position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
     border-radius: 50%;
     box-shadow: 2px 2px 3px #999;
     z-index: 999;
@@ -97,6 +101,10 @@ footer .logo {
 
 .btn btn-success {
     position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 140px;
     border-radius: 50%;
     box-shadow: 2px 2px 3px #999;
     z-index: 999;
@@ -104,9 +112,25 @@ footer .logo {
 
 .btn btn-danger {
     position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 280px;
     border-radius: 50%;
     box-shadow: 2px 2px 3px #999;
     z-index: 999;
+}
+
+.bi bi-facebook {
+    font_size: 90px;
+}
+
+.bi bi-whatsapp {
+    font_size: 90px;
+}
+
+.bi bi-instagram {
+    font_size: 90px;
 }
 
 .btn:hover {
