@@ -6,8 +6,3 @@ document.addEventListener('DOMContentLoaded', function() {
         mainNavbar.classList.toggle('active');
     });
 });
-
-document.getElementById('socialGlobe').addEventListener('click', function() {
-    var buttons = document.getElementById('socialButtons');
-    buttons.classList.toggle('show');
-});
