@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.getElementById('socialGlobe').addEventListener('click', function() {
-    var buttons = document.getElementById('socialButtons');
-    buttons.classList.toggle('show');
-});
+const balloon = document.getElementById('floatingBalloon');
+        const buttons = document.getElementById('socialButtons');
+
+        balloon.addEventListener('click', () => {
+            buttons.style.display = buttons.style.display === 'none' || buttons.style.display === '' ? 'flex' : 'none';
+        });
