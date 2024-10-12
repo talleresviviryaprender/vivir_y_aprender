@@ -89,37 +89,38 @@ footer .logo {
 }
 
 .social-globe {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #007bff;
-            color: white;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .social-buttons {
-            display: none;
-            position: absolute;
-            bottom: 70px;
-            right: 0;
-            flex-direction: column;
+    display: none;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    flex-direction: column;
 }
 
-.social-globe:hover .social-buttons {
-            display: flex;
-        }
+.social-buttons.show {
+    display: flex;
+}
 
 .social-buttons a {
-            margin: 5px 0;
-            color: white;
-            text-decoration: none;
+    margin: 5px 0;
+    color: white;
+    text-decoration: none;
 }
+
 
 /* Mostrar el botón de menú en pantallas pequeñas */
 @media (max-width: 768px) {
