@@ -75,6 +75,19 @@
     text-align: center; /* Alineación centrada */
 }
 
+.banner {
+    background-image: url("../img/banner.jpg"); /* Imagen de fondo */
+    background-position: center; /* Posición de la imagen */
+    color: #fff; /* Color del texto */
+    width: 100%; /* Ancho completo */
+    height: 300px; /* Altura del banner */
+    padding: 100px 0; /* Espaciado interior */
+}
+
+.card-group .card {
+    width: 18rem; /* Ancho predeterminado */
+}
+
 footer {
     background-color: #9dc1fd; /* Color de fondo */
     padding: 15px 0; /* Espaciado superior e inferior */
@@ -88,53 +101,57 @@ footer .logo {
     object-fit: cover; /* Asegura que la imagen cubra el contenedor */
 }
 
-.btn btn-primary {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    border-radius: 50%;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 999;
+#btn-mas {
+    display: none; /* Ocultar el botón "Ver más" por defecto */
 }
 
-.btn btn-success {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 140px;
-    border-radius: 50%;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 999;
+.redes-rrss {
+    position: fixed; /* Fijo en la parte inferior */
+    bottom: 20px; /* Parte inferior */
+    right: 20px; /* Parte derecha */
 }
 
-.btn btn-danger {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 280px;
-    border-radius: 50%;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 999;
+.redes a, .icon-mas2 {
+    display: block; /* Mostrar como bloque */
+    text-decoration: none; /* Sin subrayado */
+    background: #9f52c4; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    font-size: 1.5em; /* Tamaño de la fuente */
+    width: 30px; /* Ancho */
+    height: 30px; /* Altura */
+    line-height: 30px; /* Alineación vertical */
+    text-align: center; /* Alineación centrada */
+    border-radius: 50%; /* Forma redonda */
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4); /* Sombra */
+    transition: all 500ms; /* Transición suave */
 }
 
-.bi bi-facebook {
-    font_size: 90px;
+.redes a:hover {
+    background: #fff; /* Color de fondo */
+    color: #9f52c4; /* Color del texto */
 }
 
-.bi bi-whatsapp {
-    font_size: 90px;
+.redes a {
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility: hidden;
 }
 
-.bi bi-instagram {
-    font_size: 90px;
+#btn-mas:checked ~ .redes a {
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible; 
 }
 
-.btn:hover {
-    backgroond-color: #9dc1fd;
+.icon-mas2 {
+    cursor: pointer;
+    background: #dea6f8;
+    font-size: 23px;
+}
+
+#btn-mas:checked ~ .btn-mas .icon-mas2 {
+    transform: rotate(360deg);
+    font-size: 25px;
 }
 
 /* Mostrar el botón de menú en pantallas pequeñas */
@@ -171,6 +188,11 @@ footer .logo {
         height: 25px; /* Reducir la altura del logo */
     }
 
+    .card-group .card {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+        margin-bottom: 20px; /* Espaciado inferior entre tarjetas */
+    }
+
     footer {
         padding: 10px 0; /* Reducir el espaciado superior e inferior */
     }
@@ -197,6 +219,11 @@ footer .logo {
 
     #main {
         margin-top: 0; /* Reducir aún más el espaciado superior */
+    }
+
+    .card-group .card {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+        margin-bottom: 20px; /* Espaciado inferior entre tarjetas */
     }
 
     footer {
