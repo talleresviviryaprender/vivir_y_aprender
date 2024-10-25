@@ -1,0 +1,236 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
+}
+
+.arimo-unique {
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Estilos del botón de menú */
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    font-size: 2em;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    color: #000000;
+}
+
+#main-navbar {
+    background-color: #9dc1fd; /* Color de fondo del navbar */
+    padding: 15px 0; /* Espaciado superior e inferior */
+    position: fixed; /* Fijo en la parte superior */
+    top: 0; /* Parte superior */
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    display: flex; /* Flexbox para alinear elementos */
+    align-items: center; /* Alineación vertical */
+}
+
+.navbar ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+    display: flex; /* Flexbox para el menú */
+    align-items: center; /* Alineación vertical */
+    justify-content: center; /* Centrado horizontal */
+}
+
+.navbar li {
+    margin: 0 15px; /* Espacio entre los elementos del menú */
+}
+
+.navbar a {
+    text-decoration: none; /* Sin subrayado */
+    color: #000; /* Color del texto */
+    font-size: 1.2em; /* Tamaño de la fuente */
+}
+
+.navbar a:hover {
+    color: #9f52c4; /* Color al pasar el ratón */
+}
+
+.navbar .logo {
+    width: 30px; /* Ancho del logo */
+    height: 30px; /* Altura del logo */
+    border-radius: 50%; /* Forma redonda */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+}
+
+/* Estilos de la sección principal */
+#main {
+    margin-top: 60px; /* Espaciado superior */
+    text-align: center; /* Alineación centrada */
+}
+
+.presentacion {
+    padding: 20px 0; /* Espaciado interior */
+    border-radius: 1%;
+    border: #d8d8d8 solid 1px;
+}
+
+.presentacion .video {
+    width: 100%; /* Ancho completo */
+    height: 500px; /* Altura fija */
+    border: none; /* Sin borde */
+    object-fit: cover; /* Asegura que el video cubra el contenedor */
+}
+
+.card-group .card {
+    width: 18rem; /* Ancho predeterminado */
+}
+
+footer {
+    background-color: #9dc1fd; /* Color de fondo */
+    padding: 15px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Alineación centrada */
+}
+
+footer .logo {
+    width: 30px; /* Ancho del logo */
+    height: 30px; /* Altura del logo */
+    border-radius: 50%; /* Forma redonda */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+}
+
+#btn-mas {
+    display: none; /* Ocultar el botón "Ver más" por defecto */
+}
+
+.redes-rrss {
+    position: fixed; /* Fijo en la parte inferior */
+    bottom: 20px; /* Parte inferior */
+    right: 20px; /* Parte derecha */
+}
+
+.redes a, .icon-mas2 {
+    display: block; /* Mostrar como bloque */
+    text-decoration: none; /* Sin subrayado */
+    background: #9f52c4; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    font-size: 1.5em; /* Tamaño de la fuente */
+    width: 30px; /* Ancho */
+    height: 30px; /* Altura */
+    line-height: 30px; /* Alineación vertical */
+    text-align: center; /* Alineación centrada */
+    border-radius: 50%; /* Forma redonda */
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4); /* Sombra */
+    transition: all 500ms; /* Transición suave */
+}
+
+.redes a:hover {
+    background: #fff; /* Color de fondo */
+    color: #9f52c4; /* Color del texto */
+}
+
+.redes a {
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-mas:checked ~ .redes a {
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible; 
+}
+
+.icon-mas2 {
+    cursor: pointer;
+    background: #dea6f8;
+    font-size: 23px;
+}
+
+#btn-mas:checked ~ .btn-mas .icon-mas2 {
+    transform: rotate(360deg);
+    font-size: 25px;
+}
+
+/* Mostrar el botón de menú en pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    #main-navbar {
+        display: none; /* Ocultar el navbar por defecto */
+    }
+    #main-navbar.active {
+        display: flex; /* Mostrar el navbar cuando esté activo */
+    }
+
+    #main {
+        margin-top: 0; /* Espaciado superior */
+    }
+
+    .navbar {
+        flex-direction: column; /* Cambia la disposición a vertical */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+    }
+
+    .navbar li {
+        margin: 10px 0; /* Reducir el espacio entre los elementos del menú */
+    }
+
+    .navbar a {
+        font-size: 1em; /* Reducir el tamaño de la fuente */
+    }
+
+    .navbar .logo {
+        width: 25px; /* Reducir el ancho del logo */
+        height: 25px; /* Reducir la altura del logo */
+    }
+
+    .card-group .card {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+        margin-bottom: 20px; /* Espaciado inferior entre tarjetas */
+    }
+
+    footer {
+        padding: 10px 0; /* Reducir el espaciado superior e inferior */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Cambia la disposición a vertical */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+    }
+    
+    .navbar li {
+        margin: 5px 0; /* Reducir aún más el espacio entre los elementos del menú */
+    }
+
+    .navbar a {
+        font-size: 0.9em; /* Reducir aún más el tamaño de la fuente */
+    }
+
+    .navbar .logo {
+        width: 20px; /* Reducir aún más el ancho del logo */
+        height: 20px; /* Reducir aún más la altura del logo */
+    }
+
+    #main {
+        margin-top: 0; /* Reducir aún más el espaciado superior */
+    }
+
+    .card-group .card {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+        margin-bottom: 20px; /* Espaciado inferior entre tarjetas */
+    }
+
+    footer {
+        padding: 5px 0; /* Reducir aún más el espaciado superior e inferior */
+    }
+}
