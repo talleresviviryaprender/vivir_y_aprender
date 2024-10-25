@@ -75,13 +75,17 @@
     text-align: center; /* Alineación centrada */
 }
 
-.banner {
-    background-image: url("../img/banner.jpg"); /* Imagen de fondo */
-    background-position: center; /* Posición de la imagen */
-    color: #fff; /* Color del texto */
+.presentacion {
+    padding: 20px 0; /* Espaciado interior */
+    border-radius: 1%;
+    border: #d8d8d8 solid 1px;
+}
+
+.presentacion .video {
     width: 100%; /* Ancho completo */
-    height: 300px; /* Altura del banner */
-    padding: 100px 0; /* Espaciado interior */
+    height: 500px; /* Altura fija */
+    border: none; /* Sin borde */
+    object-fit: cover; /* Asegura que el video cubra el contenedor */
 }
 
 .card-group .card {

@@ -6,7 +6,6 @@
         <title>Vivir y Aprender</title>
         <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/fontello.css">
         <link rel="icon" href="images/vivirAprenderLogo.jpeg" type="image/png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -80,17 +79,25 @@
                     <img src="images/vivirAprenderLogo.jpeg" class="img-fluid rounded-start" alt="jpeg">
                 </div>
                 <div class="col-md-8">
-                    <div class="card-body"><!-- CORREGIR FORMULARIO Y DAR FUNCIONABILIDAD-->
-                        <h1>Contacto</h1>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-                        <button type="button" class="btn btn-success">Enviar</button>  
+                    <div class="container-form">
+            
+                        <form id="contact-form" action="https://formspree.io/f/mjkvkzky" method="post">
+                            <h2>Contacto</h2>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Mensaje:</label>
+                                <textarea id="mensaje" name="mensaje" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button><br>
+                        </form>
+                        
                     </div>
                 </div>
             </div>
